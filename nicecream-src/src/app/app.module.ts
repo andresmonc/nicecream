@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultsPageComponent } from './results-page/results-page.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ResultsPageComponent
+    ResultsPageComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule

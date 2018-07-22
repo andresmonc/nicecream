@@ -23,9 +23,9 @@ export class NavbarComponent implements OnInit {
   //   })(jQuery);
 
   
-    $(document).ready(function(){
-      $('.sidenav').sidenav();
-  });
+  //   $(document).ready(function(){
+  //     $('.sidenav').sidenav();
+  // });
 
 
 

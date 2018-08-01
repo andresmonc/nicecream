@@ -9,12 +9,10 @@
     </tr>
   </thead>
   <tbody>
-<!--     <tr *ngFor="let list of lists">
-      <td>{{list.category}}</td>
-      <td>{{list.title}}</td>
-      <td>{{list.description}}</td>
-      <td> <button type="button" (click)="deleteList(list); $event.stopPropagation();">Delete</button></td>
-
-    </tr>-->
+    <tr *ngFor="let list of lists">
+      <td>    <img src={{list.image_url}} id="photo"/> </td>
+      <td>{{list.rating}}</td>
+      <td>{{list.url}}</td>
+    </tr>
   </tbody>
 </table>

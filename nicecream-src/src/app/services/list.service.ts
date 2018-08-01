@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs';
-import List from '../models/list.model'
-import { map } from 'rxjs/operators'
-
-@Injectable({
-  providedIn: 'root'
-})
+import { Http, Headers } from '@angular/http';
+import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent, SubscriptionLike, PartialObserver } from 'rxjs';
+import { List } from '../models/list.model';
+import { map } from 'rxjs/operators';
+@Injectable()
 export class ListService {
-  private url = 'http://localhost:3000/yelp';
-  constructor(private http: HttpClient) { }
 
-  getList(): Observable<List[]> {
-    return this.http.get<List[]>(this.url);
-  }
+    constructor(private http: Http) { }
+
+    private serverApi = 'http://localhost:3000';
+
+    public getAllLists(): Observable<List[]> {
+
+        const URI = `${this.serverApi}/yelp/`;
+        return this.http.get(URI)
+            .pipe(map(res => res.json()))
+            .pipe(map(res => <List[]>res.businesses));
+    }
 }
-
-

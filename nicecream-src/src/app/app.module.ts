@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultsPageComponent } from './results-page/results-page.component';
 import { SplashComponent } from './splash/splash.component';
+import { ListService } from './services/list.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,9 @@ import { SplashComponent } from './splash/splash.component';
     SplashComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpModule,HttpClientModule
   ],
-  providers: [],
+  providers: [ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,11 @@
 nav{
-    background-color:#78ecc2
+    background-color:#78ecc2;
+}
+.svglogo {
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 2.5px;
 }

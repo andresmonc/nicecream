@@ -3,16 +3,15 @@
     <tr>
       <th>Business Picture</th>
       <th>Business Name</th>
-      <th>Description</th>
-      <th> Scoops </th>
-
+      <th>Scoops </th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let list of lists">
-      <td>    <img src={{list.image_url}} id="photo"/> </td>
+      <td><img src={{list.image_url}} id="photo"/></td>
+      <td>{{list.name}}</td>
       <td>{{list.rating}}</td>
-      <td>{{list.url}}</td>
+
     </tr>
   </tbody>
 </table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeolocationService } from '../services/geolocation.service';
 
 @Component({
   selector: 'app-splash',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashComponent implements OnInit {
 
-  constructor() { }
+  constructor(private geoServ: GeolocationService) { }
 
   ngOnInit() {
+  }
+  getAlert() {
+    console.log('test');
+    this.geoServ.getGeoLocation();
   }
 
 }

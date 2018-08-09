@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ResultsPageComponent } from './results-page/results-page.component';
 import { SplashComponent } from './splash/splash.component';
 import { ListService } from './services/list.service';
+import { GeolocationService } from './services/geolocation.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,9 @@ import { ListService } from './services/list.service';
     SplashComponent
   ],
   imports: [
-    BrowserModule,HttpModule,HttpClientModule
+    BrowserModule, HttpModule, HttpClientModule
   ],
-  providers: [ListService],
+  providers: [ListService, GeolocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

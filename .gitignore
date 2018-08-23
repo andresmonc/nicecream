@@ -35,7 +35,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-dist/
 /nicecream-src/node_modules/
 nicecream-src/node_modules
 /nicecream-src/node_modules

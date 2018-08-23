@@ -366,7 +366,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var ListService = /** @class */ (function () {
     function ListService(http) {
         this.http = http;
-        this.serverApi = 'https://intense-chamber-50128.herokuapp.com';
+        this.serverApi = 'https://n-icecream.herokuapp.com';
     }
     ListService.prototype.getAllLists = function () {
         var URI = this.serverApi + "/yelp/";

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\r\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n@media only screen and (max-width: 992px) {\r\n    /* For tablets: */\r\n    :root {\r\n        --svg-logo: 4.5em;\r\n    }\r\n}\r\n@media only screen and (min-width: 993px) {\r\n    /* For desktop: */\r\n    :root {\r\n        --svg-logo: 5em;\r\n    }\r\n\r\n}"
 
 /***/ }),
 

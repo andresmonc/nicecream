@@ -149,7 +149,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "nav{\r\n    background-color:#78ecc2;\r\n    position: fixed;\r\n    overflow: hidden;\r\n    top: 0\r\n}\r\n.svglogo {\r\n    width: 65%;\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    height: auto;\r\n    padding: 2.5px;\r\n}"
+module.exports = "nav {\r\n    background-color: #78ecc2;\r\n    position: fixed;\r\n    overflow: hidden;\r\n    top: 0;\r\n}\r\n\r\n.svglogo {\r\n    width: var(--svg-logo);\r\n    display: block;\r\n    margin-left: 4vw;\r\n    margin-right: auto;\r\n    height: auto;\r\n    padding: 2.5px;\r\n}"
 
 /***/ }),
 
@@ -232,7 +232,7 @@ module.exports = "#photo {\r\n    width: 4em;\r\n    height: 4em;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table id=\"table\">\r\n  <thead>\r\n    <tr>\r\n      <th>Business Picture</th>\r\n      <th>Business Name</th>\r\n      <th>Scoops </th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let list of lists\">\r\n      <td><img src={{list.image_url}} id=\"photo\"/></td>\r\n      <td>{{list.name}}</td>\r\n      <td>{{list.rating}}</td>\r\n\r\n    </tr>\r\n  </tbody>\r\n</table>"
+module.exports = "<table id=\"table\">\r\n  <thead>\r\n    <tr>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr *ngFor=\"let list of lists\">\r\n      <td><img src={{list.image_url}} id=\"photo\"/></td>\r\n      <td>{{list.name}}</td>\r\n      <td>{{list.rating}}</td>\r\n\r\n    </tr>\r\n  </tbody>\r\n</table>"
 
 /***/ }),
 
@@ -366,7 +366,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var ListService = /** @class */ (function () {
     function ListService(http) {
         this.http = http;
-        this.serverApi = 'http://localhost:3000';
+        this.serverApi = 'https://intense-chamber-50128.herokuapp.com';
     }
     ListService.prototype.getAllLists = function () {
         var URI = this.serverApi + "/yelp/";

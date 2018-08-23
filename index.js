@@ -15,10 +15,10 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
  app.use('/yelp',yelp2)
 /*express.static is a built in middleware function to serve static files.
- We are telling express server public folder is the place to look for the static files*/
- app.use(express.static(path.join(__dirname, 'public')));
- app.get('/',(req,res,next) => { // es6 syntax (function (req,res,next){})
-    res.send('invalidpage');
+ We are telling express server dist folder is the place to look for the static files*/
+ app.use(express.static(path.join(__dirname, 'dist')));
+ app.get('*',(req,res,next) => { // es6 syntax (function (req,res,next){})
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
 })
 
 //Starts the server to host static files

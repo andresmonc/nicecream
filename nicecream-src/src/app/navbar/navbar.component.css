@@ -1,13 +1,14 @@
-nav{
-    background-color:#78ecc2;
+nav {
+    background-color: #78ecc2;
     position: fixed;
     overflow: hidden;
-    top: 0
+    top: 0;
 }
+
 .svglogo {
-    width: 65%;
+    width: var(--svg-logo);
     display: block;
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto;
     height: auto;
     padding: 2.5px;

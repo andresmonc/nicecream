@@ -8,7 +8,7 @@ export class ListService {
 
     constructor(private http: Http) { }
 
-    private serverApi = 'http://localhost:3000';
+    private serverApi = 'https://intense-chamber-50128.herokuapp.com';
 
     public getAllLists(): Observable<List[]> {
 

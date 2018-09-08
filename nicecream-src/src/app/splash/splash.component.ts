@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GeolocationService } from '../services/geolocation.service';
 
+
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
@@ -16,5 +17,6 @@ export class SplashComponent implements OnInit {
     console.log('test');
     this.geoServ.getGeoLocation();
   }
+
 
 }

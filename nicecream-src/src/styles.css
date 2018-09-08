@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --button-color: #db46ae; 
+}
+
+
 @media only screen and (max-width: 992px) {
     /* For tablets: */
     :root {

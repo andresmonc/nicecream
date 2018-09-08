@@ -8,7 +8,7 @@ import { ResultsPageComponent } from './results-page/results-page.component';
 import { SplashComponent } from './splash/splash.component';
 import { ListService } from './services/list.service';
 import { GeolocationService } from './services/geolocation.service';
-
+import { AppRoutingModule } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,7 @@ import { GeolocationService } from './services/geolocation.service';
     SplashComponent
   ],
   imports: [
-    BrowserModule, HttpModule, HttpClientModule
+    BrowserModule, HttpModule, HttpClientModule,AppRoutingModule
   ],
   providers: [ListService, GeolocationService],
   bootstrap: [AppComponent]

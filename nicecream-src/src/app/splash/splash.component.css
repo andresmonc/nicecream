@@ -1,4 +1,6 @@
-
+.test {
+    display: none;
+}
 
 #gobutton {
     border-radius: 50%;

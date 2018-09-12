@@ -1,8 +1,10 @@
-<a id="loadbutton" [routerLink]="['/results']">
+<!-- [routerLink]="['/results']" -->
+<a id="loadbutton" (click)="showLoading()" >
+  
   <div id="icecream-bowl">
-    <div id="letter">click me</div>
+    <div id="letter"><i id="test1">click me</i></div>
 
-    <div id="animation">
+    <div id="animation" class="test">
       <div class="chocolate scoop"></div>
       <div class="vanilla scoop"></div>
       <div class="strawberry scoop"></div>

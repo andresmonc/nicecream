@@ -6,8 +6,7 @@ import { ResultsPageComponent } from './results-page/results-page.component';
 import { SplashComponent } from './splash/splash.component';
 
 export const router: Routes = [
-    { path: '', redirectTo: 'splash', pathMatch: 'full'},
-    { path: 'splash', component: SplashComponent },
+    { path: '', component: SplashComponent },
     { path: 'results', component: ResultsPageComponent }
 ];
 

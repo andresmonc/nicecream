@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GeolocationService } from '../services/geolocation.service';
-
+import { Router } from '@angular/router';
+import { delay } from 'q';
+declare var jquery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-splash',
@@ -9,7 +12,7 @@ import { GeolocationService } from '../services/geolocation.service';
 })
 export class SplashComponent implements OnInit {
 
-  constructor(private geoServ: GeolocationService) { }
+  constructor(private geoServ: GeolocationService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,5 +21,11 @@ export class SplashComponent implements OnInit {
     this.geoServ.getGeoLocation();
   }
 
-
+  showLoading() {
+    $('#test1').fadeOut();
+    $('.test').delay(1000).fadeIn();
+    setTimeout(() => {
+      this.router.navigate(["/results"]);
+    }, 8500);
+  }
 }

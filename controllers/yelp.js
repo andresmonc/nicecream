@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
 
     var latitude = req.param('lat');
     var longitude = req.param('long');
-    locationTail = `latitude=${latitude}&longitude=${longitude}`
+    locationTail = `latitude=${latitude}&longitude=${longitude}&sort_by=rating`
     var apiCall = {
         url: `${apiURL}${locationTail}`,
         headers: {
